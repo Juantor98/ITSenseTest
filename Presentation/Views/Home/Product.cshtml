@@ -1,0 +1,36 @@
+﻿<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-2">
+            @Html.Label("Código", new { @class = "control-label" })
+            @Html.Editor("Code", new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+        <div class="col-md-4">
+            @Html.Label("Nombre", new { @class = "control-label" })
+            @Html.Editor("Name", new { htmlAttributes = new { @class = "form-control"} })
+        </div>
+        <div class="col-md-2">
+            @Html.Label("Cantidad", new { @class = "control-label" })
+            @Html.Editor("Quantity", new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+        <div class="col-md-2">
+            @Html.Label("Estado", new { @class = "control-label" })
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="State">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Defectuoso
+                </label>
+            </div>
+        </div>
+    </div>
+    @Html.Hidden("Id")
+    <div class="row">
+        <div class="col-md-5">
+            <br />
+            <button type="button" id="btnSave" class="btn btn-primary">Guardar</button>
+            <button type="button" id="btnUpdate" class="btn btn-secondary">Actualizar</button>
+            <button type="button" id="btnDelete" class="btn btn-warning">Eliminar</button>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/TypeScript/Product.js"></script>
